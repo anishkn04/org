@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>three devs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f2ed;
+      --ink: #1a1814;
+      --muted: #7a7570;
+      --rule: #d4cfc9;
+      --accent: #c8401e;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 32px 60px;
+      width: 100%;
+    }
+
+    header {
+      margin-bottom: 64px;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Section titles */
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* Devs */
+    .devs {
+      margin-bottom: 56px;
+    }
+
+    .dev {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.15s;
+    }
+
+    .dev:first-child { border-top: 1px solid var(--rule); }
+
+    .dev:hover { color: var(--accent); }
+    .dev:hover .dev-url { color: var(--accent); }
+
+    .dev-num {
+      font-size: 10px;
+      color: var(--muted);
+      min-width: 18px;
+      font-weight: 300;
+    }
+
+    .dev-name {
+      font-size: 14px;
+      font-weight: 400;
+      flex: 1;
+    }
+
+    .dev-url {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 300;
+      font-style: italic;
+      transition: color 0.15s;
+    }
+
+    /* Projects */
+    .projects { }
+
+    .project {
+      display: block;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.15s;
+    }
+
+    .project:first-of-type { border-top: 1px solid var(--rule); }
+    .project:hover .project-title { color: var(--accent); }
+
+    .project-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+      transition: color 0.15s;
+    }
+
+    .project-meta {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .project-url {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+    }
+
+    footer {
+      padding: 24px 32px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      font-weight: 300;
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 48px 20px 48px; }
+      .dev-url { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="label">Portfolio</p>
+      <h1>three devs,<br /><em>one project.</em></h1>
+      <p class="subtitle">A small team building things for Nepal, one line at a time.</p>
+    </header>
+
+    <section class="devs">
+      <p class="section-label">The People</p>
+
+      <a class="dev" href="https://anishkn.com.np" target="_blank" rel="noopener">
+        <span class="dev-num">01</span>
+        <span class="dev-name">Anish K.N.</span>
+        <span class="dev-url">anishkn.com.np</span>
+      </a>
+
+      <a class="dev" href="https://paudelnishan.com.np" target="_blank" rel="noopener">
+        <span class="dev-num">02</span>
+        <span class="dev-name">Nishan Paudel</span>
+        <span class="dev-url">paudelnishan.com.np</span>
+      </a>
+
+      <a class="dev" href="https://rushabrisal.com.np" target="_blank" rel="noopener">
+        <span class="dev-num">03</span>
+        <span class="dev-name">Rushab Risal</span>
+        <span class="dev-url">rushabrisal.com.np</span>
+      </a>
+    </section>
+
+    <section class="projects">
+      <p class="section-label">What They Built</p>
+
+      <a class="project" href="https://knowyourcandidate.live" target="_blank" rel="noopener">
+        <p class="project-title">Know Your Candidate</p>
+        <p class="project-meta">A platform that lets Nepali voters research candidates before elections. Find out who is running, their background, and make an informed choice.</p>
+        <span class="project-url">knowyourcandidate.live</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    built in Nepal &nbsp;&middot;&nbsp; 2024
+  </footer>
+</body>
+</html>
